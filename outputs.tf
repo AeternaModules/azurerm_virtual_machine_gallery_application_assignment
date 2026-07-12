@@ -1,3 +1,7 @@
+output "virtual_machine_gallery_application_assignments_id" {
+  description = "Map of id values across all virtual_machine_gallery_application_assignments, keyed the same as var.virtual_machine_gallery_application_assignments"
+  value       = { for k, v in azurerm_virtual_machine_gallery_application_assignment.virtual_machine_gallery_application_assignments : k => v.id }
+}
 output "virtual_machine_gallery_application_assignments_configuration_blob_uri" {
   description = "Map of configuration_blob_uri values across all virtual_machine_gallery_application_assignments, keyed the same as var.virtual_machine_gallery_application_assignments"
   value       = { for k, v in azurerm_virtual_machine_gallery_application_assignment.virtual_machine_gallery_application_assignments : k => v.configuration_blob_uri }
