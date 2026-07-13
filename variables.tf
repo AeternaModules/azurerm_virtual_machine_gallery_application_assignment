@@ -14,7 +14,7 @@ EOT
     gallery_application_version_id = string
     virtual_machine_id             = string
     configuration_blob_uri         = optional(string)
-    order                          = optional(number) # Default: 0
+    order                          = optional(number)
     tag                            = optional(string)
   }))
 }
